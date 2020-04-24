@@ -1662,3 +1662,7 @@
 [2020-04-19  22:29:01] INFO source/source.c listener count on /live.mp3 now 0
 [2020-04-19  22:29:16] INFO source/source.c listener count on /live.mp3 now 1
 [2020-04-19  22:29:17] WARN client/client.c server client limit reached (2/3)
+[2020-04-19  22:47:39] INFO source/source.c Client 311 (127.0.0.1) has fallen too far behind, removing
+[2020-04-19  22:47:39] INFO source/source.c listener count on /live.mp3 now 0
+[2020-04-19  22:47:40] INFO source/source.c End of Stream /live.mp3
+[2020-04-19  22:47:40] INFO source/source.c Source from 127.0.0.1 at "/live.mp3" exiting

@@ -22,7 +22,7 @@ var mediaSource = new MediaSource();
 var sourceBuffer;
 
 mediaSource.addEventListener('sourceopen', function() {
-  sourceBuffer = mediaSource.addSourceBuffer('audio/mpeg');
+sourceBuffer = mediaSource.addSourceBuffer('audio/mpeg');
   
   setTimeout(function (){
       audio.play()

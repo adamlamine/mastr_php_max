@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08bed00b-a83c-4151-9de8-d4f47d1c876a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/socket_test.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/icecast/log/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/icecast/log/access.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/icecast/log/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/icecast/log/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/icecast_test.php" beforeDir="false" afterPath="$PROJECT_DIR$/icecast_test.php" afterDir="false" />
     </list>
@@ -62,37 +64,39 @@
     <session id="-938961086">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.17" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="bat" value="1" />
-          <entry key="php" value="1" />
+          <entry key="php" value="2" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Bat" value="1" />
-          <entry key="PHP" value="1" />
+          <entry key="PHP" value="2" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="801" />
+          <entry key="php" value="1572" />
           <entry key="xml" value="78" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="80" />
-          <entry key="PHP" value="721" />
+          <entry key="HTML" value="87" />
+          <entry key="PHP" value="1485" />
           <entry key="XML" value="78" />
         </counts>
       </usages-collector>
@@ -103,7 +107,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/chunkplayer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="838">
+            <state relative-caret-position="918">
               <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
             </state>
           </provider>
@@ -124,17 +128,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/icecast/icecast.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+            <state relative-caret-position="629">
+              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/icecast_test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/icecast_test.php">
+        <entry file="file://$PROJECT_DIR$/socket_test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="39" column="41" lean-forward="true" selection-start-line="39" selection-start-column="41" selection-end-line="40" selection-end-column="15" />
+            <state relative-caret-position="187">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -201,6 +214,7 @@
         <option value="$PROJECT_DIR$/renderPreview.php" />
         <option value="$PROJECT_DIR$/icecast/icecast.xml" />
         <option value="$PROJECT_DIR$/icecast_test.php" />
+        <option value="$PROJECT_DIR$/socket_test.php" />
       </list>
     </option>
   </component>
@@ -212,7 +226,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="88" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -234,6 +248,11 @@
               <item name="mastr_php_max" type="b2602c69:ProjectViewProjectNode" />
               <item name="mastr_php_max" type="462c0819:PsiDirectoryNode" />
               <item name="icecast" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mastr_php_max" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mastr_php_max" type="462c0819:PsiDirectoryNode" />
+              <item name="maxmsp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -274,7 +293,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.icecast_test.php">
+  <component name="RunManager" selected="JavaScript Debug.socket_test.php">
     <configuration name="icecast_test.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/mastr_php_max/icecast_test.php">
       <method v="2" />
     </configuration>
@@ -284,13 +303,18 @@
     <configuration name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/mastr_php/index.php">
       <method v="2" />
     </configuration>
+    <configuration name="socket_test.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/mastr_php_max/socket_test.php">
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="JavaScript Debug.index.php" />
       <item itemvalue="JavaScript Debug.index.php (1)" />
       <item itemvalue="JavaScript Debug.icecast_test.php" />
+      <item itemvalue="JavaScript Debug.socket_test.php" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.socket_test.php" />
         <item itemvalue="JavaScript Debug.icecast_test.php" />
         <item itemvalue="JavaScript Debug.index.php (1)" />
         <item itemvalue="JavaScript Debug.index.php" />
@@ -323,12 +347,16 @@
       <workItem from="1586774970593" duration="1209000" />
       <workItem from="1586811237473" duration="4720000" />
       <workItem from="1586858304889" duration="71000" />
-      <workItem from="1587214769912" duration="12392000" />
+      <workItem from="1587214769912" duration="12805000" />
+      <workItem from="1587481826275" duration="82000" />
+      <workItem from="1587586795988" duration="623000" />
+      <workItem from="1587678963982" duration="943000" />
+      <workItem from="1587722947263" duration="12910000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62644000" />
+    <option name="totallyTimeSpent" value="77615000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -343,13 +371,13 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23454158" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24520256" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -411,23 +439,6 @@
     <entry file="file://$PROJECT_DIR$/icecast/icecast.bat">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/wavesurfer_settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/mediaelement-webaudio.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/render.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -444,17 +455,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/chunkplayer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
+        <state relative-caret-position="918">
           <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/icecast/icecast.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+        <state relative-caret-position="629">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/wavesurfer_settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mediaelement-webaudio.js">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/renderPreview.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -466,10 +487,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/render.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/icecast_test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="39" column="41" lean-forward="true" selection-start-line="39" selection-start-column="41" selection-end-line="40" selection-end-column="15" />
+        <state relative-caret-position="153">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/socket_test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
