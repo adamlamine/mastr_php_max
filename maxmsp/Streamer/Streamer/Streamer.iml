@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://D:/Program Files/Cycling '74/Max 8/resources/packages/max-mxj/java-classes/classes" />
+    <output-test url="file://D:/Program Files/Cycling '74/Max 8/resources/packages/max-mxj/java-classes/classes/test/Streamer" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="max" level="application" />
+    <orderEntry type="library" name="net.sourceforge.lame-3.98.4" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://D:/Program Files/Cycling '74/Max 8/resources/packages/max-mxj/java-classes/classes" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://D:/Program Files/Cycling '74/Max 8/resources/packages/max-mxj/java-classes/classes" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/Java-WebSocket-1.4.1-with-dependencies.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Java-WebSocket-1.4.1-with-dependencies" level="application" />
+    <orderEntry type="library" name="libshout-java-2.2.2" level="project" />
+  </component>
+</module>
