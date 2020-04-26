@@ -1,19 +1,11 @@
-<?php ?>
-/**
- * Created by PhpStorm.
- * User: AdamLamine
- * Date: 26.04.2020
- * Time: 12:46
- */
-<button onclick="play()">Play</button>
+var jobID = document.getElementById('job-id').value;
 
-<script>
-class PCMPlayer{
+class ChunkPlayer{
 
-    constructor() {
+    constructor(chunkSize) {
         this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         console.log(this.audioCtx);
-        this.chunkSize = 20480;
+        this.chunkSize = chunkSize;
         this.leftBuffer   = [];
         this.rightBuffer  = [];
         this.startTime = this.audioCtx.currentTime;
@@ -24,7 +16,6 @@ class PCMPlayer{
             this.leftBuffer.push(data[i]);
             this.rightBuffer.push(data[i+(this.chunkSize/2)]);
         }
-
     }
 
     playBuffer(){
@@ -55,26 +46,3 @@ class PCMPlayer{
 
 
 }
-
-var player;
-
-function play() {
-    player = new PCMPlayer();
-    setInterval(function () {
-        player.playBuffer();
-    }, 300);
-
-    var socket = new WebSocket("ws://127.0.0.1:80");
-    socket.onmessage = function (event) {
-        var myReader = new FileReader();
-        myReader.onload = function(event){
-            var floatArray = new Float32Array(myReader.result);
-            player.fillBuffer(floatArray);
-        };
-        myReader.readAsArrayBuffer(event.data);
-    }
-}
-
-
-
-</script>

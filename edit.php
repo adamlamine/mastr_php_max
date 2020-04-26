@@ -1,26 +1,7 @@
 <?php
 session_start();
-
-echo "CHUNKS TO LOAD: " . $_SESSION["chunkcount"];
-
-$chunk_count = $_SESSION["chunkcount"];
 $jobID = $_SESSION["job"];
-$uploaddir = 'jobs/' .  $jobID . '/';
-$chunkdir = $uploaddir . 'chunks';
-
-//function loadChunks($chunkdir){
-//    $fi = new FilesystemIterator($chunkdir);
-//
-//    $entries = array();
-//    echo "<div id='chunk-container'>";
-//    foreach ($fi as $fileInfo){
-//        echo "<audio src='" . $chunkdir . '/' . $fileInfo->getFilename() . "' type='audio/mp3'></audio>";
-//    }
-//    echo "</div>";
-//}
-//loadChunks($chunkdir);
 echo "<input id='job-id'  type='hidden' value = '$jobID'>";
-echo "<input id='chunk-count'  type='hidden' value = '$chunk_count'>";
 ?>
 
 
@@ -49,7 +30,7 @@ echo "<input id='chunk-count'  type='hidden' value = '$chunk_count'>";
     </div>
 </div>
 <div class = "footer">
-    <button class = "transport-button" onClick="wavesurfer.play()">▶</button>
+    <button class = "transport-button" onClick="wavesurfer.play();initializeChunkPlayer();">▶</button>
     <button class = "transport-button" onClick="wavesurfer.pause()">❚❚</button>
 
     <div style = "height: 128px; width: 3px; background-color: white; float: left; margin-left: 30px"></div>
@@ -74,9 +55,31 @@ echo "<input id='chunk-count'  type='hidden' value = '$chunk_count'>";
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
 integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 crossorigin="anonymous"></script>
-<script src = "js/chunkplayer.js"></script>
+<script src = "js/ChunkPlayer.js"></script>
+<script src = "js/MastrSocket.js"></script>
+<script src = "js/PluginValueSender.js"></script>
 <script src = "js/plugins.js"></script>
 <script src="https://unpkg.com/wavesurfer.js"></script>
 <script src = "js/wavesurfer_settings.js"></script>
+
+
+<script>
+    function initializeChunkPlayer(){
+        player = new ChunkPlayer(20480);
+        mastrSocket = new MastrSocket("localhost", 80, player);
+
+        setInterval(function () {
+            player.playBuffer();
+        }, 300);
+
+        mastrSocket.socket.onopen = function () {
+            for(var i = 0; i < pluginList.length; i++){
+                pluginAdded(pluginList[i].type);
+            }
+        }
+    }
+
+
+</script>
 
 </body>

@@ -1,8 +1,9 @@
+import com.cycling74.max.DataTypes;
 import com.cycling74.msp.MSPPerformer;
 import com.cycling74.msp.MSPSignal;
+
 import java.net.InetSocketAddress;
 import java.nio.ByteOrder;
-import java.util.ArrayList;
 
 
 public class Streamer extends MSPPerformer
@@ -17,22 +18,19 @@ public class Streamer extends MSPPerformer
     public Streamer(float f)
     {
         declareInlets (new int[]{SIGNAL, SIGNAL});
-        declareOutlets(new int[]{SIGNAL, SIGNAL});
+        declareOutlets(new int[]{SIGNAL, SIGNAL, DataTypes.MESSAGE});
+        ThreadManager.streamer = this;
     }
 
     public void dspsetup(MSPSignal[] in, MSPSignal[] out)
     {
         post("Streamer was started.");
-        startServer();
     }
 
-    public void startServer(){
-        post("Starting Server...");
+    public void startserver(String host, int port){
+        post("Starting Server with Host: " + host + ":" + port);
 
         try{
-            String host = "localhost";
-            int port = 80;
-
             Runnable sockRunnable = new AudioSocketServerThread(this, new InetSocketAddress(host,port) );
             sockThread = new Thread(sockRunnable);
             sockThread.start();
@@ -44,8 +42,13 @@ public class Streamer extends MSPPerformer
         }
     }
 
-    public void bang(){
+    public void stopserver(){
+        post("Stopping Server...");
         ThreadManager.killAll();
+    }
+
+    public void emitCommand(String command){
+        outlet(2, command);
     }
 
     public void perform(MSPSignal[] in, MSPSignal[] out)
@@ -62,20 +65,19 @@ public class Streamer extends MSPPerformer
         PCMBytes[0] = Utilities.formatAudioData(in1, ByteOrder.LITTLE_ENDIAN);
         PCMBytes[1] = Utilities.formatAudioData(in2, ByteOrder.LITTLE_ENDIAN);
 
+        boolean isNull = (ThreadManager.mastrSocketServer == null);
 
-        if(ThreadManager.audioSocketServer != null){
-            AudioSocketServer a = ThreadManager.audioSocketServer;
+        if(ThreadManager.mastrSocketServer != null){
+            MastrSocketServer a = ThreadManager.mastrSocketServer;
 
             a.appendToPCMBuffer(0, PCMBytes[0]);
             a.appendToPCMBuffer(1, PCMBytes[1]);
 
 
             if(a.PCMMessageBuffer[0].size() >= FRAME_SIZE){
-                System.out.println(FRAME_SIZE);
                 a.sendBuffer();
             }
         }
-
 
         for(int i = 0; i < vec_size; i++){
             o1[i] = in1[i];

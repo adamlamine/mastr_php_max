@@ -7,12 +7,13 @@ public class ThreadManager {
     public static ArrayList<Thread> allThreads = new ArrayList<Thread>();
     public static ArrayList<Runnable> allRunnables = new ArrayList<Runnable>();
     public static ArrayList<Object> allObjects = new ArrayList<Object>();
+    public static Streamer streamer;
 
-    public static AudioSocketServer audioSocketServer;
+    public static MastrSocketServer mastrSocketServer;
 
     public static void killServer(){
         try{
-            audioSocketServer.stop();
+            mastrSocketServer.stop();
         } catch (Exception e){
             System.out.println("Could not stop server!");
         }

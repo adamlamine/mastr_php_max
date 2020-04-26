@@ -154,9 +154,9 @@ class PlugIn{
 		this.initSliders();
 
 		for(var i = 0; i < this.sliderList.length; i++){
-			//console.log(this.sliderList[i]);
-			//this.sliderList[i].slider.addEventListener('input', pluginValueChanged);
-            this.sliderList[i].slider.addEventListener('change', pluginValueChanged);
+			var self = this;
+			this.sliderList[i].slider.addEventListener('input', function(event){pluginValueChanged(self, event)});
+            this.sliderList[i].slider.addEventListener('change',function(event){pluginValueChanged(self, event)});
 		}
 	}
 	
@@ -469,11 +469,17 @@ var loadState = function(){
 	document.getElementById("plugin-container-inner").innerHTML = '';
 	pluginList = [];
 
+	var settings;
 	try{
-        var settings = localStorage.getItem('plugIns');
+        settings = localStorage.getItem('plugIns');
 	} catch {
-        var settings = "";
+        settings = "";
     }
+
+    if(settings == null){
+    	return;
+	}
+
 	var subSettings = settings.split("+");
 	
 	var params = [];

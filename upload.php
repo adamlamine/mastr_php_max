@@ -13,28 +13,14 @@ $_SESSION["filename"] = $_FILES['file']['name'];
 
 move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile);
 
-
 $createPreviewCMD = '"C:\Program Files (x86)\ffmpeg\bin\ffmpeg.exe" -i ' . getcwd() . '/' . $uploadfile . ' ' . getcwd() . '\\' . $uploaddir . 'preview.mp3';
 $createPreviewCMD = str_replace('/', '\\', $createPreviewCMD);
 shell_exec($createPreviewCMD);
 
-$splitPreviewCMD = '"C:\Program Files (x86)\ffmpeg\bin\ffmpeg.exe" -i "' . getcwd() . '/' . $uploaddir . 'preview.mp3' . ' ' . '" -f segment -segment_time 1 -c copy ' . getcwd() . '\\' . $chunkdir .'\\%03d.mp3';
-$splitPreviewCMD = str_replace('/', '\\', $splitPreviewCMD);
-shell_exec($splitPreviewCMD);
-echo $splitPreviewCMD;
-
-
-$fi = new FilesystemIterator($chunkdir, FilesystemIterator::SKIP_DOTS);
-$_SESSION["chunkcount"] = iterator_count($fi);
-
-$splitWAVChunksCMD = '"C:\Program Files (x86)\ffmpeg\bin\ffmpeg.exe" -i "' . getcwd() . '/' . $uploadfile . ' ' . '" -f segment -segment_time 1 -c copy ' . getcwd() . '\\' . $chunkdir .'\\%03d.aif';
-$splitWAVChunksCMD = str_replace('/', '\\', $splitWAVChunksCMD);
-shell_exec($splitWAVChunksCMD);
 echo $splitWAVChunksCMD;
 
 
 header('Location: edit.php');
-//header('Location: renderPreview.php');
 exit;
 
 

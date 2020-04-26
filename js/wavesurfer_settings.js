@@ -10,7 +10,6 @@ var initWavesurfer = function(ID){
 		container: '#waveform',
 		waveColor: 'violet',
 		progressColor: 'purple',
-		backend: 'WebAudio'
 	});
 
 
@@ -19,18 +18,16 @@ var initWavesurfer = function(ID){
 	wavesurfer.setMute(true);
 	wavesurfer.setWaveColor("rgba(20,20,255,0.8)");
 
+    //TODO: SEND PLAYBACK COMMANDS TO MAX MSP
+
     wavesurfer.on('interaction',function(){
-        audio.currentTime = wavesurfer.getCurrentTime();
     });
 
     wavesurfer.on('play',function(){
-        audio.currentTime = wavesurfer.getCurrentTime();
-        audio.play();
     });
 
     wavesurfer.on('pause',function(){
-        audio.currentTime = wavesurfer.getCurrentTime();
-        audio.pause();
+        //wavesurfer.getCurrentTime();
     });
 }
 
