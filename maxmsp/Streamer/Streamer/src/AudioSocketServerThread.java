@@ -31,22 +31,22 @@ public class AudioSocketServerThread extends MSPObject implements Runnable  {
             post(e.getMessage());
         }
 
-        Streamer streamer = this.streamer;
+//        Streamer streamer = this.streamer;
 
 
-        Timer timer = new Timer();
-        TimerTask task = new TimerTask() {
-            @Override
-            public void run() {
-                sockServ.emptyBuffer();
+//        Timer timer = new Timer();
+//        TimerTask task = new TimerTask() {
+//            @Override
+//            public void run() {
+//                sockServ.emptyBuffer();
 //                sockServ.appendToPCMBuffer(streamer.getBufferedPCM(0));
 //                sockServ.appendToPCMBuffer(streamer.getBufferedPCM(1));
 //                sockServ.sendBuffer();
-                messagesSent++;
-            }
-        };
-        ThreadManager.allTimerTasks.add(task);
-        timer.scheduleAtFixedRate(task, 20,100);
+//                messagesSent++;
+//            }
+//        };
+//        ThreadManager.allTimerTasks.add(task);
+//        timer.scheduleAtFixedRate(task, 20,100);
     }
 
 

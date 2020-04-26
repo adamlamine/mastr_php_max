@@ -9,12 +9,15 @@ import org.java_websocket.server.WebSocketServer;
 
 public class AudioSocketServer extends WebSocketServer {
 
-    ArrayList<Byte> PCMMessageBuffer = new ArrayList<Byte>();
+    ArrayList<Byte>[] PCMMessageBuffer = new ArrayList[2];
+
     WebSocket conn;
 
     public AudioSocketServer(InetSocketAddress address) {
         super(address);
         ThreadManager.audioSocketServer = this;
+        this.PCMMessageBuffer[0] = new ArrayList<Byte>();
+        this.PCMMessageBuffer[1] = new ArrayList<Byte>();
     }
 
     public void test(){
@@ -22,23 +25,28 @@ public class AudioSocketServer extends WebSocketServer {
     }
 
     public void emptyBuffer(){
-        this.PCMMessageBuffer = new ArrayList<Byte>();
+        this.PCMMessageBuffer[0] = new ArrayList<Byte>();
+        this.PCMMessageBuffer[1] = new ArrayList<Byte>();
     }
 
-    public void appendToPCMBuffer(byte[] values){
+    public void appendToPCMBuffer(int channel, byte[] values){
         for (byte b:values) {
-            this.PCMMessageBuffer.add(b);
+            if(conn != null && conn.isOpen()) {
+                this.PCMMessageBuffer[channel].add(b);
+            }
         }
     }
 
     public void sendBuffer(){
         if(conn != null && conn.isOpen()){
-            byte[] bytes = new byte[this.PCMMessageBuffer.size()];
-            for(int i = 0; i < this.PCMMessageBuffer.size(); i++){
-                bytes[i] = (byte) this.PCMMessageBuffer.get(i);
+            byte[] bytes = new byte[Streamer.FRAME_SIZE*2];
+            for(int i = 0; i < Streamer.FRAME_SIZE; i++){
+                bytes[i] = (byte) this.PCMMessageBuffer[0].get(i);
+                bytes[i+Streamer.FRAME_SIZE] = (byte) this.PCMMessageBuffer[1].get(i);
             }
             conn.send(ByteBuffer.wrap(bytes));
-            this.PCMMessageBuffer.clear();
+            this.PCMMessageBuffer[0].clear();
+            this.PCMMessageBuffer[1].clear();
         }
     }
 

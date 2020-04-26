@@ -10,10 +10,7 @@ public class Streamer extends MSPPerformer
     private Thread sockThread;
 
     public static int VECTOR_SIZE;
-    public static int FRAME_SIZE = 44100;
-
-    private ArrayList<Byte> bufferedPCM1 = new ArrayList<Byte>();
-    private ArrayList<Byte> bufferedPCM2 = new ArrayList<Byte>();
+    public static int FRAME_SIZE;
 
     public static boolean writingToBuffer;
 
@@ -47,37 +44,6 @@ public class Streamer extends MSPPerformer
         }
     }
 
-    public byte[] getBufferedPCM(int channel){
-
-        ArrayList<Byte> PCMData;
-
-        if(channel == 0){
-            PCMData = this.bufferedPCM1;
-        } else {
-            PCMData = this.bufferedPCM2;
-        }
-
-        byte[] temp = new byte[PCMData.size()];
-
-        if(PCMData.size()%4 != 0) return temp;
-
-        for(int i = 0; i < PCMData.size(); i++){
-            if(i < PCMData.size() && i < temp.length){
-                temp[i] = PCMData.get(i);
-            } else {
-                break;
-            }
-        }
-
-        if(channel == 0){
-            this.bufferedPCM1 = new ArrayList<Byte>();
-        } else {
-            this.bufferedPCM2 = new ArrayList<Byte>();
-        }
-
-        return temp;
-    }
-
     public void bang(){
         ThreadManager.killAll();
     }
@@ -90,24 +56,26 @@ public class Streamer extends MSPPerformer
         float[] o2 = out[1].vec;
         int vec_size = in[0].n;
         Streamer.VECTOR_SIZE = vec_size;
+        Streamer.FRAME_SIZE = VECTOR_SIZE * 20;
 
-        byte[] PCMBytes1  = Utilities.floatArrayToByteArray(in1);
-        float[] PCMFloats1 = Utilities.byteArrayToFloatArray(PCMBytes1, ByteOrder.LITTLE_ENDIAN);
-        PCMBytes1  = Utilities.floatArrayToByteArray(PCMFloats1);
+        byte[][] PCMBytes = new byte[2][VECTOR_SIZE];
+        PCMBytes[0] = Utilities.formatAudioData(in1, ByteOrder.LITTLE_ENDIAN);
+        PCMBytes[1] = Utilities.formatAudioData(in2, ByteOrder.LITTLE_ENDIAN);
 
-        byte[] PCMBytes2  = Utilities.floatArrayToByteArray(in2);
-        float[] PCMFloats2 = Utilities.byteArrayToFloatArray(PCMBytes2, ByteOrder.LITTLE_ENDIAN);
-        PCMBytes2  = Utilities.floatArrayToByteArray(PCMFloats2);
 
-        for (byte b:PCMBytes1) {
-            this.bufferedPCM1.add(b);
-        }
-        for (byte b:PCMBytes2) {
-            this.bufferedPCM2.add(b);
-        }
         if(ThreadManager.audioSocketServer != null){
-            ThreadManager.audioSocketServer.test();
+            AudioSocketServer a = ThreadManager.audioSocketServer;
+
+            a.appendToPCMBuffer(0, PCMBytes[0]);
+            a.appendToPCMBuffer(1, PCMBytes[1]);
+
+
+            if(a.PCMMessageBuffer[0].size() >= FRAME_SIZE){
+                System.out.println(FRAME_SIZE);
+                a.sendBuffer();
+            }
         }
+
 
         for(int i = 0; i < vec_size; i++){
             o1[i] = in1[i];

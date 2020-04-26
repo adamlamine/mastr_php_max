@@ -18,7 +18,7 @@ var player;
 function play() {
       player = new PCMPlayer({
         encoding: '32bitFloat',
-        channels: 2,
+        channels: 1,
         sampleRate: 44100,
         flushingTime: 1000
     });
@@ -35,7 +35,7 @@ function play() {
         myReader.onload = function(event){
     
             var floatArray = new Float32Array(myReader.result);
-            player.feed(floatArray);
+            player.fillBuffer(floatArray);
             console.log(floatArray.length);
         };
         myReader.readAsArrayBuffer(event.data);

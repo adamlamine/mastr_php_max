@@ -94,7 +94,7 @@
     </xsl:choose>
   </xsl:template>
   
-  <!-- Replace tab, line feed and/or carriage return by its matching escape code. Can't escape backslash
+  <!-- Replace tab, line fillBuffer and/or carriage return by its matching escape code. Can't escape backslash
        or double quote here, because they don't replace characters (&#x0; becomes \t), but they prefix 
        characters (\ becomes \\). Besides, backslash should be seperate anyway, because it should be 
        processed first. This function can't do that. -->
@@ -107,7 +107,7 @@
           <xsl:with-param name="s" select="concat(substring-before($s,'&#x9;'),'\t',substring-after($s,'&#x9;'))"/>
         </xsl:call-template>
       </xsl:when>
-      <!-- line feed -->
+      <!-- line fillBuffer -->
       <xsl:when test="contains($s,'&#xA;')">
         <xsl:call-template name="encode-string">
           <xsl:with-param name="s" select="concat(substring-before($s,'&#xA;'),'\n',substring-after($s,'&#xA;'))"/>

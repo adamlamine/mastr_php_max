@@ -6,6 +6,7 @@ import javax.sound.sampled.AudioFormat;
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.util.ArrayList;
 
 public class Utilities {
 
@@ -106,5 +107,26 @@ public class Utilities {
         }
     }
 
+    public static byte[] formatAudioData(float[] audioData, ByteOrder b){
+        byte[] PCMBytes  = Utilities.floatArrayToByteArray(audioData);
+        float[] PCMFloats = Utilities.byteArrayToFloatArray(PCMBytes, b);
+        return Utilities.floatArrayToByteArray(PCMFloats);
+    }
+
+    public static void printByteArray(byte[] arr){
+        String out = "";
+        for(byte b:arr){
+            out += " " + Byte.toString(b);
+        }
+        System.out.println(out);
+    }
+
+    public static void printByteList(ArrayList<Byte> list){
+        String out = "";
+        for(byte b:list){
+            out += " " + Byte.toString(b);
+        }
+        System.out.println(out);
+    }
 
 }
