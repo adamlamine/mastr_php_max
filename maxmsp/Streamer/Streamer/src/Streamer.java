@@ -1,24 +1,21 @@
 import com.cycling74.msp.MSPPerformer;
 import com.cycling74.msp.MSPSignal;
-import net.sourceforge.lame.lowlevel.LameEncoder;
-import net.sourceforge.lame.mp3.Lame;
-import net.sourceforge.lame.mp3.MPEGMode;
-
-import javax.sound.sampled.AudioFormat;
-import java.io.ByteArrayOutputStream;
 import java.net.InetSocketAddress;
+import java.nio.ByteOrder;
 import java.util.ArrayList;
-import java.util.TimerTask;
 
 
 public class Streamer extends MSPPerformer
 {
-    public static ArrayList<TimerTask> allTimerTasks = new ArrayList<TimerTask>();
-    public static ArrayList<Thread> allThreads = new ArrayList<Thread>();
+    private Thread sockThread;
 
-    private Thread mp3SockThread;
-    private ArrayList<Byte> bufferedMp3 = new ArrayList<Byte>();
-    private ArrayList<Byte> bufferedPCM = new ArrayList<Byte>();
+    public static int VECTOR_SIZE;
+    public static int FRAME_SIZE = 44100;
+
+    private ArrayList<Byte> bufferedPCM1 = new ArrayList<Byte>();
+    private ArrayList<Byte> bufferedPCM2 = new ArrayList<Byte>();
+
+    public static boolean writingToBuffer;
 
     public Streamer(float f)
     {
@@ -29,55 +26,60 @@ public class Streamer extends MSPPerformer
     public void dspsetup(MSPSignal[] in, MSPSignal[] out)
     {
         post("Streamer was started.");
+        startServer();
+    }
+
+    public void startServer(){
         post("Starting Server...");
 
         try{
             String host = "localhost";
             int port = 80;
 
-            Runnable mp3SockRunnable = new AudioSocketServerThread(this, new InetSocketAddress(host,port) );
-            mp3SockThread = new Thread(mp3SockRunnable);
-            mp3SockThread.start();
-            Streamer.allThreads.add(mp3SockThread);
+            Runnable sockRunnable = new AudioSocketServerThread(this, new InetSocketAddress(host,port) );
+            sockThread = new Thread(sockRunnable);
+            sockThread.start();
+            ThreadManager.allThreads.add(sockThread);
+            ThreadManager.allRunnables.add(sockRunnable);
+            ThreadManager.allObjects.add(sockRunnable);
         } catch (Exception e){
             post(e.getMessage());
         }
-
-//        float[] testFloatArray = {-0.22f, 0.21f, -0.5123123f, 0.5123123123f};
-//
-//        UtilityTest ut = new UtilityTest();
-//        byte[] testBytes = ut.testfloatArrayToByteArray(testFloatArray);
-//        testFloatArray = ut.testByteArrayToFloatArray(testBytes);
-//
-//        testBytes = ut.testFloatToByteArray(4);
-//        ut.testByteArrayToFloat(testBytes);
-
     }
 
-    public byte[] getBufferedMp3(){
-        byte[] temp = new byte[this.bufferedMp3.size()];
-        for(int i = 0; i < bufferedMp3.size(); i++){
-            temp[i] = bufferedMp3.get(i);
+    public byte[] getBufferedPCM(int channel){
+
+        ArrayList<Byte> PCMData;
+
+        if(channel == 0){
+            PCMData = this.bufferedPCM1;
+        } else {
+            PCMData = this.bufferedPCM2;
         }
-        this.bufferedMp3 = new ArrayList<Byte>();
-        return temp;
-    }
 
-    public byte[] getBufferedPCM(){
-        byte[] temp = new byte[this.bufferedPCM.size()];
-        for(int i = 0; i < bufferedPCM.size(); i++){
-            if(i < bufferedPCM.size() && i < temp.length){
-                temp[i] = bufferedPCM.get(i);
+        byte[] temp = new byte[PCMData.size()];
+
+        if(PCMData.size()%4 != 0) return temp;
+
+        for(int i = 0; i < PCMData.size(); i++){
+            if(i < PCMData.size() && i < temp.length){
+                temp[i] = PCMData.get(i);
             } else {
                 break;
             }
         }
-        this.bufferedPCM = new ArrayList<Byte>();
+
+        if(channel == 0){
+            this.bufferedPCM1 = new ArrayList<Byte>();
+        } else {
+            this.bufferedPCM2 = new ArrayList<Byte>();
+        }
+
         return temp;
     }
 
     public void bang(){
-
+        ThreadManager.killAll();
     }
 
     public void perform(MSPSignal[] in, MSPSignal[] out)
@@ -87,22 +89,24 @@ public class Streamer extends MSPPerformer
         float[] o1 = out[0].vec;
         float[] o2 = out[1].vec;
         int vec_size = in[0].n;
-
-//        float[] scaledPCMFloats1 = new float[vec_size];
-//
-//        for(int i = 0; i < scaledPCMFloats1.length; i++){
-//            scaledPCMFloats1[i] = (in1[i]);
-//        }
+        Streamer.VECTOR_SIZE = vec_size;
 
         byte[] PCMBytes1  = Utilities.floatArrayToByteArray(in1);
+        float[] PCMFloats1 = Utilities.byteArrayToFloatArray(PCMBytes1, ByteOrder.LITTLE_ENDIAN);
+        PCMBytes1  = Utilities.floatArrayToByteArray(PCMFloats1);
 
-//        byte[] testByteArray = {PCMBytes1[0], PCMBytes1[1], PCMBytes1[2], PCMBytes1[3]};
-//        float testFloat = Utilities.byteArrayToFloat(testByteArray);
-
-//        post("" + testFloat);
+        byte[] PCMBytes2  = Utilities.floatArrayToByteArray(in2);
+        float[] PCMFloats2 = Utilities.byteArrayToFloatArray(PCMBytes2, ByteOrder.LITTLE_ENDIAN);
+        PCMBytes2  = Utilities.floatArrayToByteArray(PCMFloats2);
 
         for (byte b:PCMBytes1) {
-            this.bufferedPCM.add(b);
+            this.bufferedPCM1.add(b);
+        }
+        for (byte b:PCMBytes2) {
+            this.bufferedPCM2.add(b);
+        }
+        if(ThreadManager.audioSocketServer != null){
+            ThreadManager.audioSocketServer.test();
         }
 
         for(int i = 0; i < vec_size; i++){

@@ -1,5 +1,6 @@
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
 import java.util.ArrayList;
 
 import org.java_websocket.WebSocket;
@@ -8,21 +9,23 @@ import org.java_websocket.server.WebSocketServer;
 
 public class AudioSocketServer extends WebSocketServer {
 
-    ArrayList<Byte> mp3MessageBuffer = new ArrayList<Byte>();
     ArrayList<Byte> PCMMessageBuffer = new ArrayList<Byte>();
     WebSocket conn;
 
     public AudioSocketServer(InetSocketAddress address) {
         super(address);
+        ThreadManager.audioSocketServer = this;
     }
 
-    public void setMP3Buffer(byte[] bytes){
-        for (byte b:bytes) {
-            this.mp3MessageBuffer.add(b);
-        }
+    public void test(){
+        System.out.println("TEST");
     }
 
-    public void setPCMBuffer(byte[] values){
+    public void emptyBuffer(){
+        this.PCMMessageBuffer = new ArrayList<Byte>();
+    }
+
+    public void appendToPCMBuffer(byte[] values){
         for (byte b:values) {
             this.PCMMessageBuffer.add(b);
         }
@@ -32,7 +35,7 @@ public class AudioSocketServer extends WebSocketServer {
         if(conn != null && conn.isOpen()){
             byte[] bytes = new byte[this.PCMMessageBuffer.size()];
             for(int i = 0; i < this.PCMMessageBuffer.size(); i++){
-                bytes[i] = (byte) PCMMessageBuffer.get(i);
+                bytes[i] = (byte) this.PCMMessageBuffer.get(i);
             }
             conn.send(ByteBuffer.wrap(bytes));
             this.PCMMessageBuffer.clear();
@@ -42,6 +45,7 @@ public class AudioSocketServer extends WebSocketServer {
     @Override
     public void onOpen(WebSocket conn, ClientHandshake handshake) {
         this.conn = conn;
+        ThreadManager.allObjects.add(conn);
         conn.send("Welcome to the server!"); //This method sends a message to the new client
         broadcast( "new connection: " + handshake.getResourceDescriptor() ); //This method sends a message to all clients connected
         System.out.println("new connection to " + conn.getRemoteSocketAddress());

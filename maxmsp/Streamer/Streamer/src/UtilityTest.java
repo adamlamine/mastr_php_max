@@ -1,3 +1,5 @@
+import java.nio.ByteOrder;
+
 public class UtilityTest {
 
     public byte[] testfloatArrayToByteArray(float[] input){
@@ -19,7 +21,7 @@ public class UtilityTest {
 
 
     public float[] testByteArrayToFloatArray(byte[] input){
-        float[] result = Utilities.byteArrayToFloatArray(input);
+        float[] result = Utilities.byteArrayToFloatArray(input, ByteOrder.BIG_ENDIAN);
 
         System.out.println("-----testByteArrayToFloatArray-----");
         System.out.println("Length of float array: " + result.length);
@@ -32,7 +34,7 @@ public class UtilityTest {
     }
 
     public float testByteArrayToFloat(byte[] input){
-        float result = Utilities.byteArrayToFloat(input);
+        float result = Utilities.byteArrayToFloatBigEndian(input);
         System.out.println("-----testByteArrayToFloat-----");
         String allBytesString = "INPUT: ";
         for(int i = 0; i < input.length; i++){

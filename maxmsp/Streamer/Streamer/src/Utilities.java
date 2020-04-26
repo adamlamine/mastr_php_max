@@ -3,7 +3,7 @@ import net.sourceforge.lame.mp3.Lame;
 import net.sourceforge.lame.mp3.MPEGMode;
 
 import javax.sound.sampled.AudioFormat;
-import java.io.ByteArrayOutputStream;
+import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
@@ -31,12 +31,19 @@ public class Utilities {
     public static byte[] interleaveFrame(byte[] r, byte[] l){
         int rLength = r.length;
         int lLength = l.length;
+        int iLength = rLength+lLength;
 
-        byte[] interleaved = new byte[rLength+lLength];
+        byte[] interleaved = new byte[iLength];
 
-        for(int i = 0; i < rLength; i++){
-            interleaved[i * 2] = r[i];
-            interleaved[(i * 2)+1] = l[i];
+        for(int i = 0; i < iLength/8; i+=8){
+            interleaved[i + 0] = r[i + 0];
+            interleaved[i + 1] = r[i + 1];
+            interleaved[i + 2] = r[i + 2];
+            interleaved[i + 3] = r[i + 3];
+            interleaved[i + 4] = l[i + 0];
+            interleaved[i + 6] = l[i + 1];
+            interleaved[i + 6] = l[i + 2];
+            interleaved[i + 7] = l[i + 3];
         }
         return interleaved;
     }
@@ -57,21 +64,46 @@ public class Utilities {
         return ByteBuffer.allocate(4).putFloat(value).array();
     }
 
-    public static float byteArrayToFloat(byte[] bytes){
+    public static float byteArrayToFloatBigEndian(byte[] bytes){
         return ByteBuffer.wrap(bytes).order(ByteOrder.BIG_ENDIAN).getFloat();
     }
 
-    public static float[] byteArrayToFloatArray(byte[] bytes){
+    public static float byteArrayToFloatLittleEndian(byte[] bytes){
+        return ByteBuffer.wrap(bytes).order(ByteOrder.LITTLE_ENDIAN).getFloat();
+    }
+
+    public static float[] byteArrayToFloatArray(byte[] bytes, ByteOrder b){
 
         float[] output = new float[bytes.length/4];
 
         for(int i = 0; i < bytes.length; i+=4){
             byte[] temp = {bytes[i], bytes[i+1], bytes[i+2], bytes[i+3]};
-            float f = byteArrayToFloat(temp);
+            float f;
+            if(b == ByteOrder.BIG_ENDIAN){
+                f = byteArrayToFloatBigEndian(temp);
+            } else {
+                f = byteArrayToFloatLittleEndian(temp);
+            }
             output[i/4] = f;
         }
 
         return output;
+    }
+
+    public static void writeToFile(byte[] data) {
+        OutputStream os = null;
+        try {
+            os = new FileOutputStream(new File("C:\\Users\\AdamLamine\\Desktop\\testAudio.raw"), true);
+            os.write(data, 0, data.length);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally{
+            try {
+                os.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
 

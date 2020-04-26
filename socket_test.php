@@ -13,13 +13,17 @@ echo <<< HTML
 <script src="pcm-player.js"></script>
 <script>
 
+var player;
+
 function play() {
-      var player = new PCMPlayer({
+      player = new PCMPlayer({
         encoding: '32bitFloat',
-        channels: 1,
+        channels: 2,
         sampleRate: 44100,
         flushingTime: 1000
     });
+    
+    
     
     
     
@@ -32,7 +36,7 @@ function play() {
     
             var floatArray = new Float32Array(myReader.result);
             player.feed(floatArray);
-            console.log(floatArray);
+            console.log(floatArray.length);
         };
         myReader.readAsArrayBuffer(event.data);
     }
