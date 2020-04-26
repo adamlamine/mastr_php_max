@@ -1,5 +1,6 @@
 var pluginList = [];
 var imgPath = "";
+var MAX_PLUGINS = 5;
 
 Number.prototype.map = function (in_min, in_max, out_min, out_max) {
   return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
@@ -158,6 +159,7 @@ class PlugIn{
 			this.sliderList[i].slider.addEventListener('input', function(event){pluginValueChanged(self, event)});
             this.sliderList[i].slider.addEventListener('change',function(event){pluginValueChanged(self, event)});
 		}
+
 	}
 	
 	initWindow(){
@@ -437,7 +439,12 @@ var initPlugin = function(type){
 	} else if (type == 5){
 		pluginList.push(new Creamy(5, "creamybg.png"));
 	}
-		
+
+    try{
+        pluginAdded(type);
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 var saveState = function(){
@@ -546,7 +553,7 @@ var closePlugin = function(ID){
 	pluginDiv.parentNode.removeChild(pluginDiv);
 	
 	pluginList.splice(index, 1);
-	
+	pluginRemoved();
 }
 
 var movePluginUp = function(ID){

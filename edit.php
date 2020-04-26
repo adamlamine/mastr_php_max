@@ -16,7 +16,7 @@ echo "<input id='job-id'  type='hidden' value = '$jobID'>";
     <title>MASTR</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body onLoad="loadState();initWavesurfer('<?php echo $_SESSION['job'] ?>')">
+<body onLoad="initWavesurfer('<?php echo $_SESSION['job'] ?>')">
 <div class = "bg-img" id = "bg-img" style="background-image: img/background.png"></div>
 <div class = "header" style="background-image: img/logo.png"></div>
 <div class = "flex-container">
@@ -73,12 +73,11 @@ crossorigin="anonymous"></script>
         }, 300);
 
         mastrSocket.socket.onopen = function () {
-            for(var i = 0; i < pluginList.length; i++){
-                pluginAdded(pluginList[i].type);
-            }
+            pluginAdded();
         }
     }
 
+    window.addEventListener("load", function (){loadState(); console.log("TEST")});
 
 </script>
 
