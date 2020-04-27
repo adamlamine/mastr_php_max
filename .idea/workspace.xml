@@ -3,13 +3,43 @@
   <component name="ChangeListManager">
     <list default="true" id="08bed00b-a83c-4151-9de8-d4f47d1c876a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icecast_test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/1426EFB9-B51C-4A0E-85D9-12CF618EA0D8/TESTMUSIC2.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/1426EFB9-B51C-4A0E-85D9-12CF618EA0D8/preview.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/TestFile.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/000.aif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/000.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/001.aif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/001.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/002.aif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/002.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/003.aif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/003.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/004.aif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/004.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/005.aif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/005.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/006.aif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/006.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/007.aif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/007.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/008.aif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/008.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/009.aif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/009.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/010.aif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/010.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/011.aif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/011.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/012.aif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/012.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/013.aif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/013.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/preview.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/7B2E9BBB-15CE-42C2-9223-9A36C8F41E42/TestFile.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/7B2E9BBB-15CE-42C2-9223-9A36C8F41E42/preview.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/F3A799EC-DD16-4668-9F83-09590EC85B8D/TestFile.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/F3A799EC-DD16-4668-9F83-09590EC85B8D/preview.mp3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/maxmsp/effect_streamer.maxpat" beforeDir="false" afterPath="$PROJECT_DIR$/maxmsp/effect_streamer.maxpat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mrswatson64_098.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pcm-player.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/render.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_test.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket_test2.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -99,7 +129,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="js" value="2712" />
-          <entry key="php" value="3832" />
+          <entry key="php" value="4026" />
           <entry key="xml" value="78" />
         </counts>
       </usages-collector>
@@ -107,7 +137,7 @@
         <counts>
           <entry key="HTML" value="104" />
           <entry key="JavaScript" value="2712" />
-          <entry key="PHP" value="3728" />
+          <entry key="PHP" value="3922" />
           <entry key="XML" value="78" />
         </counts>
       </usages-collector>
@@ -149,7 +179,7 @@
         <entry file="file://$PROJECT_DIR$/renderPreview.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
-              <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -166,8 +196,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="408">
+              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -298,6 +328,11 @@
             <path>
               <item name="mastr_php_max" type="b2602c69:ProjectViewProjectNode" />
               <item name="mastr_php_max" type="462c0819:PsiDirectoryNode" />
+              <item name="jobs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mastr_php_max" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mastr_php_max" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -345,14 +380,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.php (1)">
+  <component name="RunManager" selected="JavaScript Debug.index.php (2)">
     <configuration name="edit.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/mastr_php_max/edit.php">
       <method v="2" />
     </configuration>
-    <configuration name="icecast_test.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/mastr_php_max/icecast_test.php">
+    <configuration name="index.php (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/mastr_php_max/index.php">
       <method v="2" />
     </configuration>
-    <configuration name="index.php (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/mastr_php_max/index.php">
+    <configuration name="index.php (2)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/mastr_php_max/index.php">
       <method v="2" />
     </configuration>
     <configuration name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/mastr_php/index.php">
@@ -370,18 +405,18 @@
     <list>
       <item itemvalue="JavaScript Debug.socket_test2" />
       <item itemvalue="JavaScript Debug.index.php" />
-      <item itemvalue="JavaScript Debug.icecast_test.php" />
       <item itemvalue="JavaScript Debug.socket_test.php" />
       <item itemvalue="JavaScript Debug.edit.php" />
       <item itemvalue="JavaScript Debug.index.php (1)" />
+      <item itemvalue="JavaScript Debug.index.php (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.php (2)" />
         <item itemvalue="JavaScript Debug.index.php (1)" />
         <item itemvalue="JavaScript Debug.index.php" />
         <item itemvalue="JavaScript Debug.edit.php" />
         <item itemvalue="JavaScript Debug.index.php" />
-        <item itemvalue="JavaScript Debug.socket_test.php" />
       </list>
     </recent_temporary>
   </component>
@@ -420,12 +455,12 @@
       <workItem from="1587853114930" duration="1592000" />
       <workItem from="1587892708096" duration="25436000" />
       <workItem from="1587974487869" duration="17000" />
-      <workItem from="1588014626400" duration="1308000" />
+      <workItem from="1588014626400" duration="3924000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124382000" />
+    <option name="totallyTimeSpent" value="126998000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -438,7 +473,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25586355" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -641,7 +675,7 @@
     <entry file="file://$PROJECT_DIR$/renderPreview.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -654,8 +688,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="408">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
         </state>
       </provider>
     </entry>
