@@ -15,10 +15,6 @@ move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile);
 
 $createPreviewCMD = '"C:\Program Files (x86)\ffmpeg\bin\ffmpeg.exe" -i ' . getcwd() . '/' . $uploadfile . ' ' . getcwd() . '\\' . $uploaddir . 'preview.mp3';
 $createPreviewCMD = str_replace('/', '\\', $createPreviewCMD);
-shell_exec($createPreviewCMD);
-
-echo $splitWAVChunksCMD;
-
 
 header('Location: edit.php');
 exit;
