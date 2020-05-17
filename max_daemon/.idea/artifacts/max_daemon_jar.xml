@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="max_daemon:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/max_daemon_jar</output-path>
+    <root id="archive" name="max_daemon.jar">
+      <element id="module-output" name="max_daemon" />
+    </root>
+  </artifact>
+</component>

@@ -13,7 +13,7 @@ function pluginValueChanged(plugin, event) {
     }
 }
 
-function pluginAdded(){
+function sendPluginList(){
     for(var i = 0; i < MAX_PLUGINS; i++){
         var sendString = "/plugin " + i + " ";
 
@@ -47,6 +47,6 @@ function pluginAdded(){
 }
 
 function pluginRemoved() {
-    pluginAdded();
+    sendPluginList();
 }
 

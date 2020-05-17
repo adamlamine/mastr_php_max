@@ -124,7 +124,7 @@ class Slider{
 		this.label.value = this.labelText + this.value + this.unit; //+ "  (" + Math.floor( this.relativeValue * 100 ) / 100 + ")";
 		
 		if(this.stepped){
-			this.label.value = this.labelText + this.stepList[this.value] + this.unit;
+			this.label.value = this.labelText + this.stepList[Math.round(this.value)] + this.unit;
 		}
 	}
 	
@@ -363,7 +363,7 @@ class PreQ extends PlugIn{
 		this.sliderList.push(new Slider(this.pluginDiv, "Q Factor: ", "", 4, false, 540, 20, 0.2, 6.5, 0, 0.001, ""));
 //		
 //		//Band Type
-		this.sliderList.push(new Slider(this.pluginDiv, "Style: ", "", 1, false, 540, 20, 0, 3, 0, 1, ""));
+		this.sliderList.push(new Slider(this.pluginDiv, "Style: ", "", 1, false, 540, 20, 0.01, 3, 0, 0.001, ""));
 		this.sliderList[3].setStepped(true, ["Bell", "Low Shelf", "HiPass", "Low P-Shelf"]);
 //			
 //		
@@ -441,7 +441,7 @@ var initPlugin = function(type){
 	}
 
     try{
-        pluginAdded(type);
+        sendPluginList(type);
     } catch (e) {
         console.log(e);
     }
@@ -519,8 +519,7 @@ var loadState = function(){
 			var parameterValue = parameterPair[1];
 			
 			//console.log("Parameter: " + parameterNr + ": " + parameterValue);
-			
-			pluginList[i].sliderList[parameterNr].slider.value = parameterValue;
+			try {pluginList[i].sliderList[parameterNr].slider.value = parameterValue;} catch (e) {console.log(e)}
 		}
 	}
 	
@@ -573,8 +572,7 @@ var movePluginUp = function(ID){
 		pluginList[index-1] = temp;
 	}
 
-
-
+	sendPluginList();
 }
 
 var movePluginDown = function(ID){
@@ -596,6 +594,7 @@ var movePluginDown = function(ID){
 		pluginList[index] = pluginList[index+1];
 		pluginList[index+1] = temp;
 	}
+    sendPluginList();
 }
 
 var bypass = function(ID){
@@ -630,47 +629,6 @@ var displayLoadingScreen = function(){
 	document.body.appendChild(loadingDiv);
 }
 
-var render = function(ID, filename){
-	
-	//TODO: Mit ajax request ersetzen
-	//displayLoadingScreen();
-
-	var pluginString = JSON.stringify(pluginList);
-
-    $.ajax({
-        type: "POST",
-        url: "render.php",
-        data: pluginString,
-        success: function (returnedData) {
-			console.log(returnedData);
-        }
-    });
-	
-	var url = "/edit.php?id=" + ID + "&filename=" + filename + "&plugindata=";
-
-	for(var i = 0; i < pluginList.length; i++){
-		var plugin = pluginList[i];
-		
-		if(plugin.bypass){continue;}
-		
-		url += "plug=" + plugin.type;
-		
-		for(var j = 0; j < plugin.sliderList.length; j++){
-			
-			var sliderValue = plugin.sliderList[j].getRelativeValue();
-			var parameterNr = plugin.sliderList[j].parameterNr;
-			
-			url += "&param=" + parameterNr + "&val=" + sliderValue;
-			
-		}
-		
-		
-	}
-	if(pluginList.length <= 0){url = "/finished/" + ID + "&" + filename +"&+1-0%0-3%1-4%1-1%0";}
-	
-	//window.location.replace(url);
-	//console.log(url);
-}
 
 var download = function(ID, filename){
 	

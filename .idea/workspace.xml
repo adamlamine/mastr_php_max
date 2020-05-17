@@ -2,44 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08bed00b-a83c-4151-9de8-d4f47d1c876a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/index__Webserver_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/Meter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/max_daemon/commands.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/max_daemon/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/1426EFB9-B51C-4A0E-85D9-12CF618EA0D8/TESTMUSIC2.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/1426EFB9-B51C-4A0E-85D9-12CF618EA0D8/preview.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/TestFile.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/000.aif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/000.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/001.aif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/001.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/002.aif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/002.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/003.aif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/003.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/004.aif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/004.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/005.aif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/005.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/006.aif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/006.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/007.aif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/007.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/008.aif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/008.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/009.aif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/009.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/010.aif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/010.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/011.aif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/011.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/012.aif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/012.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/013.aif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/chunks/013.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/147FA3D9-E893-4D84-9DAF-F3E8F4F82267/preview.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/7B2E9BBB-15CE-42C2-9223-9A36C8F41E42/TestFile.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/7B2E9BBB-15CE-42C2-9223-9A36C8F41E42/preview.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/F3A799EC-DD16-4668-9F83-09590EC85B8D/TestFile.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/jobs/F3A799EC-DD16-4668-9F83-09590EC85B8D/preview.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jobs/D444AEEF-1D32-4213-9F7A-4567829391F7/original.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ChunkPlayer.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ChunkPlayer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/MastrSocket.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/MastrSocket.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/PluginValueSender.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/PluginValueSender.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/wavesurfer_settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/wavesurfer_settings.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maxmsp/effect_streamer.maxpat" beforeDir="false" afterPath="$PROJECT_DIR$/maxmsp/effect_streamer.maxpat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maxmsp/original.wav" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/upload.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,46 +75,54 @@
     <session id="-938961086">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.closed" value="9" />
+          <entry key="project.open.time.0" value="5" />
+          <entry key="project.open.time.1" value="4" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.17" value="1" />
-          <entry key="project.open.time.6" value="4" />
-          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="5" />
+          <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="bat" value="1" />
-          <entry key="js" value="11" />
-          <entry key="php" value="12" />
+          <entry key="css" value="1" />
+          <entry key="js" value="19" />
+          <entry key="php" value="23" />
           <entry key="ts" value="2" />
+          <entry key="txt" value="2" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Bat" value="1" />
-          <entry key="JavaScript" value="11" />
-          <entry key="PHP" value="12" />
+          <entry key="CSS" value="1" />
+          <entry key="JavaScript" value="19" />
+          <entry key="PHP" value="23" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="TypeScript" value="2" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="2712" />
-          <entry key="php" value="4026" />
+          <entry key="css" value="291" />
+          <entry key="js" value="4496" />
+          <entry key="php" value="5459" />
           <entry key="xml" value="78" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="CSS" value="291" />
           <entry key="HTML" value="104" />
-          <entry key="JavaScript" value="2712" />
-          <entry key="PHP" value="3922" />
+          <entry key="JavaScript" value="4496" />
+          <entry key="PHP" value="5355" />
           <entry key="XML" value="78" />
         </counts>
       </usages-collector>
@@ -145,97 +130,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ChunkPlayer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/plugins.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="541" column="33" selection-start-line="541" selection-start-column="33" selection-end-line="541" selection-end-column="33" />
-              <folding>
-                <element signature="n#Slider#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/renderPreview.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="106" selection-start-line="14" selection-start-column="106" selection-end-line="14" selection-end-column="106" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+            <state relative-caret-position="643">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/PluginValueSender.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269382">
-              <caret line="15859" column="4" selection-start-line="15859" selection-start-column="4" selection-end-line="15859" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/MastrSocket.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/wavesurfer_settings.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/max_daemon/commands.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -270,6 +176,9 @@
       <find>addPl</find>
       <find>loadState</find>
       <find>remove</find>
+      <find>start-overlay-container-loading</find>
+      <find>start-overlay</find>
+      <find>meteri</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -289,12 +198,16 @@
         <option value="$PROJECT_DIR$/socket_test2.php" />
         <option value="$PROJECT_DIR$/js/chunkplayer.js" />
         <option value="$PROJECT_DIR$/js/socket.js" />
-        <option value="$PROJECT_DIR$/js/wavesurfer_settings.js" />
-        <option value="$PROJECT_DIR$/js/ChunkPlayer.js" />
         <option value="$PROJECT_DIR$/js/MastrSocket.js" />
-        <option value="$PROJECT_DIR$/edit.php" />
+        <option value="$PROJECT_DIR$/js/wavesurfer_settings.js" />
         <option value="$PROJECT_DIR$/js/PluginValueSender.js" />
+        <option value="$PROJECT_DIR$/js/Meter.js" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/js/ChunkPlayer.js" />
         <option value="$PROJECT_DIR$/js/plugins.js" />
+        <option value="$PROJECT_DIR$/edit.php" />
+        <option value="$PROJECT_DIR$/max_daemon/commands.txt" />
+        <option value="C:/wamp64/www/mastr/upload.php" />
         <option value="$PROJECT_DIR$/upload.php" />
       </list>
     </option>
@@ -307,7 +220,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="88" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -328,17 +241,12 @@
             <path>
               <item name="mastr_php_max" type="b2602c69:ProjectViewProjectNode" />
               <item name="mastr_php_max" type="462c0819:PsiDirectoryNode" />
-              <item name="jobs" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mastr_php_max" type="b2602c69:ProjectViewProjectNode" />
               <item name="mastr_php_max" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mastr_php_max" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mastr_php_max" type="462c0819:PsiDirectoryNode" />
-              <item name="maxmsp" type="462c0819:PsiDirectoryNode" />
+              <item name="max_daemon" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -349,23 +257,24 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../24296_ELO_Scores" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\AdamLamine\PhpstormProjects\mastr_php\jobs" />
-      <recent name="C:\Users\AdamLamine\PhpstormProjects\mastr_php\img" />
-      <recent name="C:\Users\AdamLamine\PhpstormProjects\mastr_php" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\AdamLamine\PhpstormProjects\mastr_php_max" />
       <recent name="C:\Users\AdamLamine\PhpstormProjects\mastr_php" />
       <recent name="C:\Users\AdamLamine\PhpstormProjects\mastr_php\js" />
       <recent name="C:\Users\AdamLamine\PhpstormProjects\mastr_php\css" />
       <recent name="C:\Users\AdamLamine\PhpstormProjects\mastr_php\img" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\AdamLamine\PhpstormProjects\mastr_php_max\max_daemon" />
+      <recent name="C:\Users\AdamLamine\PhpstormProjects\mastr_php\jobs" />
+      <recent name="C:\Users\AdamLamine\PhpstormProjects\mastr_php\img" />
+      <recent name="C:\Users\AdamLamine\PhpstormProjects\mastr_php" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -380,17 +289,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.php (2)">
+  <component name="RunManager" selected="PHP Built-in Web Server.index (Webserver)">
     <configuration name="edit.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/mastr_php_max/edit.php">
       <method v="2" />
     </configuration>
-    <configuration name="index.php (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/mastr_php_max/index.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="index.php (2)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/mastr_php_max/index.php">
-      <method v="2" />
-    </configuration>
     <configuration name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/mastr_php/index.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63341/mastr_php_max/index.php">
       <method v="2" />
     </configuration>
     <configuration name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/mastr_php/index.php">
@@ -399,24 +305,22 @@
     <configuration name="socket_test2" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63343/mastr_php_max/socket_test2.php">
       <method v="2" />
     </configuration>
-    <configuration name="socket_test.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/mastr_php_max/socket_test.php">
+    <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/index.php">
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.socket_test2" />
-      <item itemvalue="JavaScript Debug.index.php" />
-      <item itemvalue="JavaScript Debug.socket_test.php" />
+      <item itemvalue="PHP Built-in Web Server.index (Webserver)" />
       <item itemvalue="JavaScript Debug.edit.php" />
-      <item itemvalue="JavaScript Debug.index.php (1)" />
-      <item itemvalue="JavaScript Debug.index.php (2)" />
+      <item itemvalue="JavaScript Debug.index.php" />
+      <item itemvalue="PHP Script.index.php" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index.php (2)" />
-        <item itemvalue="JavaScript Debug.index.php (1)" />
+        <item itemvalue="JavaScript Debug.index.php" />
+        <item itemvalue="PHP Script.index.php" />
         <item itemvalue="JavaScript Debug.index.php" />
         <item itemvalue="JavaScript Debug.edit.php" />
-        <item itemvalue="JavaScript Debug.index.php" />
       </list>
     </recent_temporary>
   </component>
@@ -455,12 +359,22 @@
       <workItem from="1587853114930" duration="1592000" />
       <workItem from="1587892708096" duration="25436000" />
       <workItem from="1587974487869" duration="17000" />
-      <workItem from="1588014626400" duration="3924000" />
+      <workItem from="1588014626400" duration="4891000" />
+      <workItem from="1588179139690" duration="16000" />
+      <workItem from="1588424293802" duration="2945000" />
+      <workItem from="1588428100787" duration="3305000" />
+      <workItem from="1588503549851" duration="223000" />
+      <workItem from="1588503789511" duration="9668000" />
+      <workItem from="1588617471086" duration="46000" />
+      <workItem from="1589655003048" duration="5273000" />
+      <workItem from="1589668473657" duration="140000" />
+      <workItem from="1589666382788" duration="3094000" />
+      <workItem from="1589717208327" duration="2623000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126998000" />
+    <option name="totallyTimeSpent" value="155298000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -473,13 +387,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25586355" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28411514" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -530,11 +445,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pluginsOld.js" />
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561" />
-      </provider>
-    </entry>
     <entry file="file://C:/wamp64/bin/php/php7.3.12/php.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -562,20 +472,8 @@
     <entry file="file://$PROJECT_DIR$/js/mediaelement-webaudio.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/icecast_test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/socket_test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/icecast_test.php" />
+    <entry file="file://$PROJECT_DIR$/socket_test.php" />
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -590,43 +488,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/socket_test2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="60" selection-start-line="60" selection-end-line="75" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/wavesurfer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/ChunkPlayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="81" column="9" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/PluginValueSender.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="19" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/socket_test2.php" />
+    <entry file="file://$PROJECT_DIR$/render.php" />
+    <entry file="file://$PROJECT_DIR$/pcm-player.js" />
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269382">
@@ -634,43 +498,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/wavesurfer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="746" column="35" selection-start-line="746" selection-start-column="35" selection-end-line="746" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/MastrSocket.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="153">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/wavesurfer_settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/plugins.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="541" column="33" selection-start-line="541" selection-start-column="33" selection-end-line="541" selection-end-column="33" />
-          <folding>
-            <element signature="n#Slider#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/render.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pcm-player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/../mastr_php/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/renderPreview.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -686,10 +529,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/wamp64/www/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ChunkPlayer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="39" selection-start-line="43" selection-start-column="39" selection-end-line="43" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="923">
+          <caret line="75" column="20" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Meter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="54" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="388" column="12" selection-start-line="388" selection-start-column="12" selection-end-line="388" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/wavesurfer_settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="126" column="73" selection-start-line="126" selection-start-column="73" selection-end-line="126" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/PluginValueSender.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/wamp64/www/mastr/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="2" lean-forward="true" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/max_daemon/commands.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/upload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        <state relative-caret-position="643">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
         </state>
       </provider>
     </entry>

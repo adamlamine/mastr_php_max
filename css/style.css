@@ -332,3 +332,59 @@ input[type=range].slider:focus::-ms-fill-upper {
 }
 
 /*---------------------------------------------*/
+
+
+#start-overlay {
+	z-index: 99999;
+	background: #484d4d;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	font-size: 1.4em;
+}
+
+#start-overlay * {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	align-self: center;
+}
+
+#overlay-description {
+	margin: 30px;
+}
+
+#overlay-loading-symbol{
+	height: 4em;
+	width: 4em;
+}
+
+#start-overlay-container {
+
+}
+
+#start-overlay-container-loading {
+	display: none;
+}
+
+#metering-container {
+	display: flex;
+	flex-direction: row;
+	height: 50vh;
+	width: 50px;
+	background: black;
+	position: fixed;
+	right: 40px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.metering-canvas {
+	height: 100%;
+	width: 50%;
+}

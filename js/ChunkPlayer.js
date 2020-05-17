@@ -9,6 +9,8 @@ class ChunkPlayer{
         this.leftBuffer   = [];
         this.rightBuffer  = [];
         this.startTime = this.audioCtx.currentTime;
+        this.leftMeter = new Meter(this.audioCtx, document.querySelector("#metering-canvas-left"));
+        this.rightMeter = new Meter(this.audioCtx, document.querySelector("#metering-canvas-right"));
     }
 
     fillBuffer(data) {
@@ -28,13 +30,18 @@ class ChunkPlayer{
             r[i] = this.rightBuffer[i];
         }
 
-
         if (this.startTime < this.audioCtx.currentTime) {
             this.startTime = this.audioCtx.currentTime;
         }
 
         var bufferSource = this.audioCtx.createBufferSource();
         bufferSource.buffer = buffer;
+
+        var splitter = this.audioCtx.createChannelSplitter(2);
+        splitter.connect(this.leftMeter.node, 0);
+        splitter.connect(this.rightMeter.node, 1);
+
+        bufferSource.connect(splitter);
         bufferSource.connect(this.audioCtx.destination);
         bufferSource.start(this.startTime);
 
@@ -43,6 +50,8 @@ class ChunkPlayer{
         this.leftBuffer   = [];
         this.rightBuffer  = [];
     }
+
+
 
 
 }
