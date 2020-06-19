@@ -54,11 +54,14 @@ echo "<input id='job-id'  type='hidden' value = '$jobID'>";
 
     <div class = "add-button-container" id = "add-button-container">
         <select id = "selector">
+            <option value="PreQ">Equalizer:  PREQ</option>
+            <option value="PoolTec">Equalizer:  Pool-Tec</option>
             <option value="FastFilter Go-L">Limiter: FastFilter Go-L</option>
-            <option value="FastFilter Go-R">Reverb: FastFilter Go-R</option>
-            <option value="Beheader">Distortion: Beheader</option>
-            <option value="PreQ">Equalizer: PREQ</option>
-            <option value="Creamy">Tape Emulation: Creamy Tape</option>
+                <option value="FastFilter Go-C">Compressor: FastFilter Go-C</option>
+            <option value="FastFilter Saturday">Saturation: FastFilter Saturday</option>
+                       <option value="Beheader">Saturation: Beheader</option>
+                         <option value="Creamy">Tape Emulation: Creamy Tape</option>
+                <option value="FastFilter Go-R">Reverb: FastFilter Go-R</option>
         </select>
         <button class = "add-button" onClick="addPlugin(); saveState()">Add FX</button>
         <button class = "add-button" onClick = "download('<?php echo $_SESSION['job'] ?>', '<?php echo $_SESSION['filename'] ?>')">DOWNLOAD</button>
@@ -82,11 +85,11 @@ crossorigin="anonymous"></script>
     var sockPort =  '<?php echo $_SESSION['sock_port'] ?>'
     function initializeChunkPlayer(){
         player = new ChunkPlayer(20480);
-        mastrSocket = new MastrSocket("localhost", sockPort, player);
+        mastrSocket = new MastrSocket("192.168.0.24", sockPort, player);
 
         setInterval(function () {
             player.playBuffer();
-        }, 300);
+        }, 50);
 
         mastrSocket.socket.addEventListener('open', function () {
             console.log("Opened Connection!");

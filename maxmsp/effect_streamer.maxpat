@@ -44,8 +44,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 966.0, 326.0, 172.0, 22.0 ],
-					"text" : "sprintf startserver localhost %s"
+					"patching_rect" : [ 966.0, 326.0, 195.0, 22.0 ],
+					"text" : "sprintf startserver 192.168.0.24 %s"
 				}
 
 			}
@@ -1806,11 +1806,11 @@
 			}
  ],
 		"parameters" : 		{
-			"obj-50" : [ "vst~[4]", "vst~[4]", 0 ],
-			"obj-51" : [ "vst~[5]", "vst~[5]", 0 ],
 			"obj-52" : [ "vst~[6]", "vst~[6]", 0 ],
-			"obj-1" : [ "vst~[1]", "vst~[1]", 0 ],
+			"obj-50" : [ "vst~[4]", "vst~[4]", 0 ],
 			"obj-49" : [ "vst~[3]", "vst~[3]", 0 ],
+			"obj-51" : [ "vst~[5]", "vst~[5]", 0 ],
+			"obj-1" : [ "vst~[1]", "vst~[1]", 0 ],
 			"parameterbanks" : 			{
 
 			}

@@ -27,6 +27,7 @@ function setImgPath(inputImgPath){
 var getLogValue = function(logFunc, x){
 	var logFunc = logFunc;
 	var x = x;
+	var e = 2.71828182;
 	
 	if(logFunc == "FabFilter Pro-L"){
 		return Math.floor( 10000 * Math.pow(x, 4) );
@@ -39,6 +40,26 @@ var getLogValue = function(logFunc, x){
 		if(x===0){return 16;}
 		return Math.floor(-0.5479839 + 15.6486*Math.pow( Math.E, (+7.218778*x) ) );
 		
+	} else if (logFunc == "FabFilter Pro-C Ratio") {
+		if(x > 0.999){
+			return 100;
+		} else if(x < 0.17) {
+			return 1;
+		}
+
+		if(x < 0.9){
+            return 0.1039438 + 0.6251685 * Math.pow(e,(+3.103894*x)) - 0.12;
+		} else {
+            return 114.0606 + (12.67906 - 114.0606)/(1 + Math.pow((x/0.9779572),89.5577));
+		}
+
+	} else if (logFunc == "FabFilter Pro-C Attack"){
+		if(x == 0) {
+			return 0.01;
+		}
+        return 10086670 + (0.0002699972 - 10086670)/(1 + Math.pow((x/34.29578),3.000049));
+	} else if (logFunc == "FabFilter Pro-C Release"){
+		return -0.09649111 + 27.7722*Math.pow(e,(+4.471626*x));
 	}
 	
 }
@@ -179,6 +200,7 @@ class PlugIn{
 		//Header
 		var header = document.createElement("div");
 		header.style.height = "50px";
+		header.classList.add("plugin-header");
 		this.pluginDiv.appendChild(header);
 		
 		var closeButton = document.createElement("button");
@@ -410,6 +432,201 @@ class Creamy extends PlugIn{
 	}
 }
 
+class FastFilterQ extends PlugIn{
+
+    constructor(type, bgImg){
+        super(type, bgImg);
+    }
+
+    initSliders(){
+
+        //Spacer
+        var spacer = document.createElement("div");
+        spacer.style.height = "35px";
+        this.pluginDiv.appendChild(spacer);
+
+        //Input Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "Input: ", "dB", 10, false, 540, 20, -18, 18, 0, 0.01, ""));
+
+        //Saturation Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "Saturation: ", "", 16, false, 540, 20, 0, 30, 0, 0.01, ""));
+
+        //WOW & Flutter Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "WOW & Flutter: ", "", 7, false, 540, 20, 0, 100, 20, 0.01, ""));
+
+        //Spacer
+        var spacer = document.createElement("div");
+        spacer.style.height = "5px";
+        this.pluginDiv.appendChild(spacer);
+    }
+}
+
+class FastFilterC extends PlugIn{
+
+    constructor(type, bgImg){
+        super(type, bgImg);
+    }
+
+    initSliders(){
+
+        //Spacer
+        var spacer = document.createElement("div");
+        spacer.style.height = "35px";
+        this.pluginDiv.appendChild(spacer);
+
+        //Input Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "Input Gain: ", "dB", 35, false, 150, 20, -36, 36, 0, 0.01, ""));
+
+        //Output Wet Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "Dry Gain: ", "dB", 10, false, 150, 20, -36, 36, 0, 0.01, ""));
+
+        //Output Dry Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "Wet Gain: ", "dB", 12, false, 150, 20, -36, 36, 0, 0.01, ""));
+
+        //Style
+		var styleSlider = new Slider(this.pluginDiv, "Style: ", "", 0, false, 150, 20, 0, 7, 0, 1, "");
+        this.sliderList.push(styleSlider);
+        styleSlider.setStepped(true, ['Clean', 'Classing', 'Opto', 'Vocal', 'Mastering', 'Bus', 'Punch', 'Pumping']);
+
+        //Treshold
+        this.sliderList.push(new Slider(this.pluginDiv, "Treshold: ", "dB", 1, false, 150, 20, -60, 0, -18, 1, ""));
+
+        //Ratio
+		var ratioSlider = new Slider(this.pluginDiv, "Ratio: ", ":1", 2, false, 150, 20, 0, 1, 0.6, 0.01, "FabFilter Pro-C Ratio");
+		ratioSlider.logarithmic = true;
+        this.sliderList.push(ratioSlider);
+
+        //Knee
+        this.sliderList.push(new Slider(this.pluginDiv, "Knee: ", "dB", 3, false, 150, 20, 0, 72, 18, 0.1, ""));
+
+        //Attack
+        var attackSlider = new Slider(this.pluginDiv, "Attack: ", "ms", 5, false, 150, 20, 0, 1, 0.1, 0.01, "FabFilter Pro-C Attack");
+        attackSlider.logarithmic = true;
+        this.sliderList.push(attackSlider);
+
+        //Release
+        var releaseSlider = new Slider(this.pluginDiv, "Release: ", "ms", 6, false, 150, 20, 0, 1, 0.44, 0.01, "FabFilter Pro-C Release");
+        releaseSlider.logarithmic = true;
+        this.sliderList.push(releaseSlider);
+
+        //Spacer
+        var spacer = document.createElement("div");
+        spacer.style.height = "5px";
+        this.pluginDiv.appendChild(spacer);
+    }
+}
+
+class FastFilterSaturday extends PlugIn{
+
+    constructor(type, bgImg){
+        super(type, bgImg);
+    }
+
+    initSliders(){
+
+        //Spacer
+        var spacer = document.createElement("div");
+        spacer.style.height = "35px";
+        this.pluginDiv.appendChild(spacer);
+
+
+		//NUM ACTIVE BANDS (Invisible)
+        var invisibleNumActiveBandsSlider = new Slider(this.pluginDiv, "NumActiveBands: ", "", 5, false, 130, 20, 0, 15, 2, 1, "");
+        invisibleNumActiveBandsSlider.slider.style.display = 'none';
+        invisibleNumActiveBandsSlider.label.style.display = 'none';
+
+
+        //Input Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "Input Gain: ", "dB", 0, false, 265, 20, -36, 36, 0, 0.01, ""));
+
+        //Output Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "Output Gain: ", "dB", 1, false, 265, 20, -36, 36, 0, 0.01, ""));
+
+        //Crossover Frequency
+        this.sliderList.push(new Slider(this.pluginDiv, "Crossover Frequency: ", "Hz", 20, false, 540, 20, 20, 18000, 0, 1, "PreQ Frequency"));
+
+        //Band 1 Mix
+        this.sliderList.push(new Slider(this.pluginDiv, "Band1 Mix: ", "%", 16, false, 130, 20, 0, 100, 100, 0.1, ""));
+
+        //Band 1 Dynamics
+        this.sliderList.push(new Slider(this.pluginDiv, "Band1 Dynamics: ", "%", 8, false, 130, 20, -100, 100, 100, 0.01, ""));
+
+        //Band 1 Style
+		var band1StyleSlider = new Slider(this.pluginDiv, "Bnd1 Style: ", "", 9, false, 130, 20, 0, 15, 0, 1, "");
+		var saturnStyles = ["Clean Tube", "Warm Tube", "Broken Tube", "Clean Tape", "Warm Tape", "Old Tape", "Smooth Amp", "Crunchy Amp", "Lead Amp", "Screaming Amp", "Power Amp", "Gentle Saturation", "Heavy Saturation", "Smudge", "Rectify", "Destroy"];
+        this.sliderList.push(band1StyleSlider);
+        band1StyleSlider.setStepped(true, saturnStyles);
+
+
+        //Band 2 Mix
+        this.sliderList.push(new Slider(this.pluginDiv, "Band2 Mix: ", "%", 31, false, 130, 20, 0, 100, 100, 0.1, ""));
+
+        //Band 2 Dynamics
+        this.sliderList.push(new Slider(this.pluginDiv, "Band2 Dynamics: ", "%", 23, false, 130, 20, -100, 100, 100, 0.01, ""));
+
+        //Band 2 Style
+        var band2StyleSlider = new Slider(this.pluginDiv, "Bnd2 Style: ", "", 24, false, 130, 20, 0, 15, 0, 1, "");
+        this.sliderList.push(band2StyleSlider);
+        band2StyleSlider.setStepped(true, saturnStyles);
+
+        //Spacer
+        var spacer = document.createElement("div");
+        spacer.style.height = "5px";
+        this.pluginDiv.appendChild(spacer);
+    }
+}
+
+class Pooltec extends PlugIn{
+
+    constructor(type, bgImg){
+        super(type, bgImg);
+    }
+
+    initSliders(){
+
+        //Spacer
+        var spacer = document.createElement("div");
+        spacer.style.height = "35px";
+        this.pluginDiv.appendChild(spacer);
+
+        //Low Boost Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "Low Boost: ", "", 0, false, 268, 20, 0, 11, 0, 0.1, ""));
+
+        //High Boost Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "High Boost: ", "", 3, false, 268, 20, 0, 11, 0, 0.1, ""));
+
+
+        //Low Atten Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "Low Atten: ", "", 1, false, 268, 20, 0, 11, 0, 0.1, ""));
+
+
+        //High Atten Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "High Atten: ", "", 6, false, 268, 20, 0, 11, 0, 0.1, ""));
+
+
+
+        //Low Frequency Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "Low Frequency: ", "Hz", 2, false, 268, 20, 20, 100, 20, 0.01, ""));
+
+
+        //High Frequency Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "High Frequency: ", "KHz", 5, false, 268, 20, 3, 16, 3, 0.01, ""));
+
+
+        //Bandwidth Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "Bandwidth: ", "", 4, false, 150, 20, 0, 11, 0, 0.1, ""));
+
+
+        //Atten Select Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "Atten Sel: ", "", 4, false, 150, 20, 5, 20, 5, 5, ""));
+
+        //Gain Fader
+        this.sliderList.push(new Slider(this.pluginDiv, "Gain: ", "dB", 4, false, 150, 20, -18, 18, 0, 0.1, ""));
+
+
+    }
+}
+
 var addPlugin = function(){
 	selectorState = document.getElementById("selector").value;
 	
@@ -423,7 +640,15 @@ var addPlugin = function(){
 		initPlugin(4);
 	} else if (selectorState === "Creamy"){
 		initPlugin(5);
-	}
+	} else if (selectorState === "FastFilter Go-Q"){
+        initPlugin(6);
+	} else if (selectorState === "FastFilter Go-C"){
+        initPlugin(7);
+    } else if (selectorState === "FastFilter Saturday"){
+        initPlugin(8);
+    } else if (selectorState === "PoolTec"){
+        initPlugin(9);
+    }
 
 }
 
@@ -438,7 +663,15 @@ var initPlugin = function(type){
 		pluginList.push(new PreQ(4, "preqbg.png"));
 	} else if (type == 5){
 		pluginList.push(new Creamy(5, "creamybg.png"));
-	}
+	} else if (type == 6){
+        pluginList.push(new FastFilterQ(6, "goQbg.png"));
+    } else if (type == 7){
+        pluginList.push(new FastFilterC(7, "goCbg.png"));
+    } else if (type == 8){
+        pluginList.push(new FastFilterSaturday(8, "goSatbg.png"));
+    } else if (type == 9){
+        pluginList.push(new Pooltec(9, "pooltec.png"));
+    }
 
     try{
         sendPluginList(type);

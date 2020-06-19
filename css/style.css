@@ -126,8 +126,9 @@ label{
 }
 
 .plugin {
-	display: flex;    
-	flex-direction: column;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
 	padding: 10px;
 	margin-top: 20px;
 	background-color:rgba(43,43,43,0.40);
@@ -137,6 +138,14 @@ label{
 	height: 320px;
 /*	overflow: hidden;*/
 	background-size: cover;
+	justify-content: center;
+}
+
+.plugin-header {
+	position: relative;
+	right: 10px;
+	width: 560px;
+	transform: translate(10px, 0px);
 }
 
 .slider {
@@ -152,6 +161,8 @@ label{
 .slider-container {	
 	display: block;
 	margin-left: 5px;
+	display: flex;
+	flex-direction: column;
 }
 
 

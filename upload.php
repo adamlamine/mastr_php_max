@@ -14,7 +14,7 @@ $_SESSION["job"] = $jobID;
 $_SESSION["filename"] = $_FILES['file']['name'];
 
 $config_file = fopen(__DIR__ . '\\' . $uploaddir . "config.txt", "w");
-$sock_port = rand(8000,10000);
+$sock_port = rand(8100,10000);
 $_SESSION['sock_port'] = $sock_port;
 
 move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile);
@@ -31,8 +31,6 @@ $daemonCMDFile = fopen(__DIR__ . '\\' . "max_daemon\\commands.txt", "w");
 fwrite($daemonCMDFile, $openMaxCMD);
 fclose($daemonCMDFile);
 
-//session_write_close();
-//pclose(popen("start /B ". $openMaxCMD, "r"));
 
 $createPreviewCMD = '"C:\Program Files (x86)\ffmpeg\bin\ffmpeg.exe" -i ' . getcwd() . '/' . $uploadfile . ' ' . getcwd() . '\\' . $uploaddir . 'preview.mp3';
 $createPreviewCMD = str_replace('/', '\\', $createPreviewCMD);
